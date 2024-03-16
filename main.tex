@@ -1,0 +1,359 @@
+\documentclass[letterpaper]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\usepackage{setspace}  % For double spacing
+
+\setlength{\footskip}{3.60004pt}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeadingWithDetails}[4]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\[5pt] % Adjust the spacing here (e.g., 2pt)
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+% ----- RESUME STARTS HERE -----
+
+\begin{document}
+\linespread{1.25}
+
+%----------BIG NAME----------
+% \begin{center}
+%     \textbf{\Huge \scshape Gavin Tranquilino} \\ \vspace{1pt}
+% \end{center}
+
+% %----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{https://www.gavintranquilino.com/}{\Huge \scshape Gavin Tranquilino}} & \href{mailto:gtranqui@uwaterloo.ca}{\underline{gtranqui@uwaterloo.ca}}\\
+%   \href{https://www.gavintranquilino.com/}{\underline{gavintranquilino.com}}& \href{https://linkedin.com/in/gavintranquilino}{\underline{linkedin.com/in/gavintranquilino}} \\
+%   \href{https://github.com/gavintranquilino}{\underline{github.com/gavintranquilino}}
+% \end{tabular*}
+
+%----------HEADING LINKS RIGHT ALIGNED----------
+% \begin{center}
+%     \textbf{\Huge \scshape Gavin Tranquilino} \\
+%     \vspace{3pt}
+%     \textit{1A Mechatronics Engineering Student}
+% \end{center}
+
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%     \href{mailto:gtranqui@uwaterloo.ca}{\underline{gtranqui@uwaterloo.ca}} & 
+%     \href{https://linkedin.com/in/gavintranquilino}{\underline{linkedin.com/in/gavintranquilino}} \\ 
+%     \href{https://www.gavintranquilino.com/}{\underline{gavintranquilino.com}} &
+%     \href{https://github.com/gavintranquilino}{\underline{github.com/gavintranquilino}} 
+% \end{tabular*}
+
+% ----------HEADING LINKS RIGHT ALIGNED ARCHIVED----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{https://www.gavintranquilino.com/}{\Huge \scshape Gavin Tranquilino}} & \\
+%   \href{https://linkedin.com/in/gavintranquilino}{\underline{linkedin.com/in/gavintranquilino}} & 
+%   \href{mailto:gtranqui@uwaterloo.ca}{\underline{gtranqui@uwaterloo.ca}} \\ \href{https://github.com/gavintranquilino}{\underline{github.com/gavintranquilino}} &
+%   \href{https://www.gavintranquilino.com/}{\underline{gavintranquilino.com}}
+% \end{tabular*}
+
+%----------CHATGPT HEADER 2---------
+\begin{center}
+    \begin{tabularx}{\textwidth}{@{}X X@{}}
+        \textbf{\Huge \scshape \href{https://www.gavintranquilino.com}{Gavin Tranquilino}} & 
+        \textbf{\hfill} \href{mailto:gtranqui@uwaterloo.ca}{\underline{gtranqui@uwaterloo.ca}} \\
+        \textit{\Large Mechatronics Engineering Student} & \textbf{\hfill} \href{https://www.gavintranquilino.com}{\underline{gavintranquilino.com}} \\
+        & \textbf{\hfill} \href{https://linkedin.com/in/gavintranquilino}{\underline{linkedin.com/in/gavintranquilino}} \\
+        & \textbf{\hfill} \href{https://github.com/gavintranquilino}{\underline{github.com/gavintranquilino}}
+    \end{tabularx}
+\end{center}
+
+%----------HEADING CENTERED----------
+% \begin{center}
+%     \textbf{\Huge \scshape Gavin Tranquilino} \\ \vspace{2pt}
+%     \textit{\Large 1A Mechatronics Engineering} \\ \vspace{2pt}
+%     \href{mailto:gtranqui@uwaterloo.ca}{\underline{gtranqui@uwaterloo.ca}} $|$
+%     \href{https://www.gavintranquilino.com}{\underline{gavintranquilino.com}} $|$ 
+%     \href{https://linkedin.com/in/gavintranquilino}{\underline{linkedin.com/in/gavintranquilino}} $|$
+%     \href{https://github.com/gavintranquilino}{\underline{github.com/gavintranquilino}}
+% \end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Waterloo}{Waterloo, ON}
+      {Candidate for BASc in Mechatronics Engineering}{Expected Jun. 2028}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Mechanical Engineering Associate}{Jan. 2024 -- Present}
+      {Sheartak Tools Ltd.}{Waterloo, ON}
+      \resumeItemListStart
+        % \resumeItem{Explored methods to generate video game dungeons based off of \emph{The Legend of Zelda}}
+        \resumeItem{Utilized SolidWorks to model custom spiral cutterheads for woodworking tools sent in by clients, ensuring precision and adherence to manufacturing specifications.}
+        % \resumeItem{Generated comprehensive installation guides for woodworking machinery components, utilizing Google dork queries assisted by ChatGPT to find relevant parts lists online.}
+        \resumeItem{Recorded, edited, and garnered over 1,000 views on YouTube tutorial videos, enhancing Sheartak's online presence and user engagement.}
+        \resumeItem{Developed a Python script to streamline 200+ product uploads, ensuring consistency across various platforms.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\href{https://www.gavintranquilino.com/rapid-react.html}{Intake Mechanism Designer}}{Nov. 2021 -- Jun. 2023}
+      {FIRST Robotics Canada}{Waterloo, ON}
+      \resumeItemListStart
+        \resumeItem{Collaborated to design an intake mechanism using SolidWorks for large tennis balls, contributing to our qualification for the FIRST Robotics Worlds championship.}
+        \resumeItem{Leveraged CNC machining to craft a wooden prototype, uncovering the opportunity to enhance chain engagement by 10\% through optimized linkage placement.}
+        \resumeItem{Enhanced intake reliability and maneuverability through material testing, 3D modelling and 3D printing boosting pickup success from 50\% to 80\% and optimizing tight-corner performance.}
+        % \resumeItem{Worked with electrical and software teams to solve technical issues, ensuring robot functionality and reliability in high-stress matches.}
+      \resumeItemListEnd
+      
+% -----------Multiple Positions Heading-----------
+   % \resumeSubSubheading
+   %  {Software Engineer I}{Oct 2014 - Sep 2016}
+   %  \resumeItemListStart
+   %     \resumeItem{Apache Beam}
+   %       {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+   %  \resumeItemListEnd
+   % \resumeSubHeadingListEnd
+%-------------------------------------------
+
+    % \resumeSubheading
+    %   {HackTheNorth}{HackTheNorth}
+    %   \resumeItemListStart
+    %   \resumeItemListEnd
+
+    \resumeSubheading
+      {Robotics Design Team Leader}{Feb. 2023 -- May 2023}
+      {Skills Ontario Competition}{Etobicoke, ON}
+      \resumeItemListStart
+        % \resumeItem{Streamlined 3-axis milling techniques to fabricate competition compliant hardware housing.}
+        \resumeItem{Employed innovative design techniques, utilizing drill batteries and avoiding pre-built kits for electronics housing to reduce 80\% of project expenses.}
+        % \resumeItem{Directed efficient recovery efforts as a collaborative leader, swiftly restoring the robot's functionality post failure, meeting strict deadlines}
+        \resumeItem{Leveraged Arduino programming and electrical signal processing to enhance wheel torque through 3-phase motors.}
+    \resumeItemListEnd
+
+
+    % \resumeSubheading
+    %   {Air and Noise EHS Engineering Co-op}{Jun. 2022 -- Jul. 2022}
+    %   {GHD}{Waterloo, ON}
+    %   \resumeItemListStart
+    %     % \resumeItem{Explored methods to generate video game dungeons based off of \emph{The Legend of Zelda}}
+    %     \resumeItem{Cataloged ventilation system updates in the company database, streamlining data accessibility for engineers.}
+    %     \resumeItem{Transcribed raw vibration data from Kitchener ion light rail train tracks into Excel spreadsheets, facilitating data analysis for modeling, resulting in improved insight into daily vibration patterns.}
+    %     % \resumeItem{Analyzed raw invoice data, precisely calculating energy consumption for a leading Yukon energy firm.}
+    %     \resumeItem{Reviewed ESDM reports to track client's hazardous air contaminants, enhancing data accuracy.}
+    %   \resumeItemListEnd
+
+    % \resumeSubheading
+    %   {Math and English Tutor}{Oct. 2021 -- Jun. 2023}
+    %   {Freelance}{}
+    %   \resumeItemListStart
+    %     \resumeItem{Nurtured digital literacy, conducting online tutoring sessions and maintaining a supportive virtual learning environment}
+    %     \resumeItem{Applied transferable math skills to support clients in the past school year, resulting in a 10\% average grade improvement}
+    %     \resumeItem{Tailored lesson plans and practice exams, optimizing students' test readiness and elevating their academic achievement}
+    %     \resumeItem{Developed communication skills, advertising services online and in person, resulting in increased clientele}
+    %   \resumeItemListEnd
+
+    % \resumeSubheading
+    %   {\href{https://cravinvinyls.etsy.com/}{Small Business Entrepreneur}}{Jun. 2019 -- Ongoing}
+    %   {\href{https://cravinvinyls.etsy.com/}{Cravin' Vinyls}}{}
+    %   \resumeItemListStart
+    %     \resumeItem{Launched a dynamic multi-platform e-commerce retail venture, specializing in sticker decals, and clothing, driving revenue growth through strategic marketing.}
+    %     \resumeItem{Developed customer service skills by providing support and communication to a diverse clientele.}
+    %     \resumeItem{Elevated brand visibility through social media marketing, leveraging platforms such as Instagram (\href{https://www.instagram.com/cravin.vinyls/}{\underline{@cravin.vinyls}}), resulting in a 30\% increase in online sales and a 20\% growth in follower base within 3 months}
+    %     \resumeItem{Optimized financing, budgeting, and pricing strategies to achieve an 80\% sales increase.}
+    %   \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {\textbf{\underline{\href{https://github.com/gavintranquilino/ml-unicycle}{ML Self-Balancing Unicycle}}} $|$ \emph{C++, Raylib, Control Theory, AI/ML, Genetic Algorithm}}{}
+          \resumeItemListStart
+            \resumeItem{Utilized a genetic algorithm to fine-tune PID constants, optimizing system performance and stability.}
+            \resumeItem{Derived equations of motion for the ML Self-Balancing Unicycle system, ensuring accurate modeling of dynamics.}
+            \resumeItem{Implemented PID control algorithms to stabilize the unicycle, effectively maintaining balance during operation.}
+          \resumeItemListEnd    
+
+      \resumeProjectHeading
+          {\textbf{\underline{\href{https://devpost.com/software/lmql}{AI Agents: Large Model Query Language Demo}}} $|$ \emph{LMQL, Python, AI Agents, AI/ML, Tokenization}}{}
+          \resumeItemListStart
+            \resumeItem{1st place winner at AI Agents Hackathon}
+            \resumeItem{Utilized LMQL Playground and OpenAI API to integrate LMQL features into the platform, enhancing user experience and enabling advanced search functionalities, resulting in a 20\% increase in user engagement.}
+            \resumeItem{Researched and implemented cutting-edge AI concepts such as AI, transformations, models, and tokenization, effectively improving platform functionality and staying ahead of industry trends.}
+          \resumeItemListEnd    
+
+      \resumeProjectHeading
+          {\textbf{\underline{\href{https://github.com/ransomw/the-benevolent-dictators}{Blink Twice If You Need Help}}} $|$ \emph{Python, OpenCV, Twilio, Git, GitHub, Face Tracking}}{}
+          \resumeItemListStart
+            \resumeItem{Engineered wearable device for real-time double blink detection, triggering immediate calls for assistance.}
+            \resumeItem{Integrated Twilio for swift emergency contact, reducing response time by 50\%.}
+            \resumeItem{Collaborated on blink detection and call systems, achieving seamless functionality in 24-hour hackathon.}
+          \resumeItemListEnd    
+
+      % \resumeProjectHeading
+      %     {\textbf{\underline{\href{https://github.com/ransomw/the-benevolent-dictators}{Benevolens}}} $|$ \emph{Python, Optical Character Recognition, Steganography, Git, GitHub}}{}
+      %     \resumeItemListStart
+      %       \resumeItem{Leveraged steganography and optical character recognition (OCR) to encode and decode hidden messages in images, improving data security and facilitating covert communication.}
+      %       \resumeItem{Employed Git to effectively collaborate with a team of 5 in developing a command-line interface (CLI) within a 2 week project completion timeframe.}
+      %     \resumeItemListEnd    
+
+      % \resumeProjectHeadingWithDetails
+      %     {\textbf{\underline{\href{https://devpost.com/software/psyche-tracker}{PsychTracker}}} $|$
+      %     \emph{Python, Linux, SSH, Arduino, C++, Git, OpenCV, SolidWorks, Tensorflow, MongoDB}}{}{HackTheNorth}{}
+
+      %     \resumeItemListStart
+      %       \resumeItem{Harnessed soldering techniques to create robust and durable electrical connections.}
+      %       \resumeItem{Integrated a temperature sensor into the device for skin temperature data collection.}
+      %       \resumeItem{Led a 3-member team to swiftly complete Psych Tracker within a 36-hour timeframe, ensuring successful hardware and machine learning integration.}
+      %     \resumeItemListEnd 
+    
+      \resumeProjectHeading
+          {\textbf{\underline{\href{https://www.gavintranquilino.com/light-switch.html}{Light Switch Bot/Mount}}} $|$ \emph{Python, Flask, 3D Modelling, 3D Printing, Fusion360, Linux, HTTP, TLS}}{}
+          \resumeItemListStart
+            \resumeItem{Designed a 3D-printed mount with an integrated web application for remote light switch control.}
+            \resumeItem{Implemented a Raspberry Pi web server, enabling remote access to room lights globally.}
+            \resumeItem{Innovatively enhanced safety by designing a physical light switch mount, eliminating high-voltage work.}
+          \resumeItemListEnd
+
+      % \resumeProjectHeading
+      %     {\textbf{Lamp Notification Bot} $|$ \emph{Python, Soldering, Wiring, Linux}}{}
+      %     \resumeItemListStart
+      %       \resumeItem{Implemented Python programming skills to enable real-time mobile notifications through a wired desktop lamp modification}
+      %     \resumeItemListEnd
+
+      % \resumeProjectHeading
+      %     {\textbf{\href{https://www.gavintranquilino.com/covid-19-bypass.html}{\underline{COVID-19 Screening Bypass}}} $|$ \emph{Python, SMTP, Web Scraping}}{}
+      %     \resumeItemListStart
+      %       \resumeItem{Automated daily school COVID-19 screening by implementing web scraping techniques and SMTP protocol requests}
+      %     \resumeItemListEnd
+
+      % \resumeProjectHeading
+      %     {\textbf{Quadratic Equation Visualizer} $|$ \emph{Python, Matplotlib}}{}
+      %     \resumeItemListStart
+      %       \resumeItem{Developed a streamlined quadratic equation calculator with matplotlib for instant computation, enabling users to efficiently solve and visualize quadratic equations}
+      %     \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+% \section{Technical Skills}
+%  \begin{itemize}[leftmargin=0.15in, label={}]
+%     \small{\item{
+%      \textbf{Languages}{: Java, Python, C/C++, SQL (Postgres), JavaScript, HTML/CSS, R} \\
+%      \textbf{Frameworks}{: React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI} \\
+%      \textbf{Developer Tools}{: Git, Docker, TravisCI, Google Cloud Platform, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse} \\
+%      \textbf{Libraries}{: pandas, NumPy, Matplotlib}
+%     }}
+%  \end{itemize}
+
+
+% %-----------EDUCATION-----------
+% \section{Education}
+%   \resumeSubHeadingListStart
+%     \resumeSubheading
+%       {University of Waterloo}{Waterloo, ON}
+%       {Candidate for BASc in Mechatronics Engineering}{Sep. 2023 -- Jun. 2028}
+%   \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}

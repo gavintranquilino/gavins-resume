@@ -1,0 +1,11 @@
+# LaTeX gitignore
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.run.xml
+*.synctex(busy)
+*.synctex.gz(busy)
+*.pdfsync
