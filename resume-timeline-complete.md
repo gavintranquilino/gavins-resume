@@ -1,3 +1,5 @@
+# Complete timeline
+
 ## School
 - St. Mary’s High School
     - Ontario Secondary School Diploma
