@@ -1,0 +1,17 @@
+name: Dispatch PDF Update
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  dispatch_event:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch repository dispatch event
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.WORKFLOW_DISPATCH_TOKEN }}
+          repository: gavintranquilino/gavintranquilino.github.io
+          event-type: pdf_update
