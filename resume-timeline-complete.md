@@ -1,4 +1,4 @@
-# Complete timeline
+# Complete resume timeline
 
 ## School
 - St. Mary’s High School
