@@ -11,6 +11,17 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+
+% color
+\usepackage{xcolor}
+\usepackage[normalem]{ulem}
+\usepackage{hyperref}
+\definecolor{lightblue}{rgb}{0, 0.333, 0.9}
+\hypersetup{
+  colorlinks,
+  urlcolor=lightblue
+  }
+
 \input{glyphtounicode}
 
 \usepackage{setspace}  % For double spacing
@@ -106,7 +117,7 @@
 % ----- RESUME STARTS HERE -----
 
 \begin{document}
-\linespread{1.25}
+\linespread{1.3}
 
 %----------BIG NAME----------
 % \begin{center}
@@ -131,13 +142,12 @@
 %----------NAME TOP LEFT, LINKS TOP RIGHT ALIGNED---------
 \begin{center}
     \begin{tabularx}{\textwidth}{@{}X X@{}}
-        \textbf{\Huge \scshape \href{https://www.gavintranquilino.com}{Gavin Tranquilino}} & 
-        \textbf{\hfill} \href{mailto:gtranqui@uwaterloo.ca}{\underline{gtranqui@uwaterloo.ca}} \\
-        \textit{\Large Mechatronics Engineering Student} & \textbf{\hfill} \href{https://www.gavintranquilino.com}{\underline{gavintranquilino.com}} \\
+        \textbf{\Huge \scshape \href{https://www.gavintranquilino.com}{Gavin Tranquilino}} &
+        \textbf{\hfill} \href{mailto:gtranqui@uwaterloo.ca}{\underline{gtranqui@uwaterloo.ca}}                                                                                                             \\
+        \textit{\Large Mechatronics Engineering Student}                                   
+        & \textbf{\hfill} \href{https://www.gavintranquilino.com}{\underline{gavintranquilino.com}}                     \\
         & \textbf{\hfill} \href{https://linkedin.com/in/gavintranquilino}{\underline{linkedin.com/in/gavintranquilino}} \\
-        & \textbf{\hfill} \href{https://github.com/gavintranquilino}{\underline{github.com/gavintranquilino}}
-    \end{tabularx}
-\end{center}
+        & \textbf{\hfill} \href{https://github.com/gavintranquilino}{\underline{github.com/gavintranquilino}} \end{tabularx} \end{center}
 
 %----------HEADING CENTERED, LINKS CENTERED IN A ROW----------
 % \begin{center}
@@ -149,217 +159,230 @@
 %     \href{https://github.com/gavintranquilino}{\underline{github.com/gavintranquilino}}
 % \end{center}
 
-%-----------SKILLS-----------
-\section{Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-    %  \textbf{Software}{: SolidWorks, Fusion360, AutoCAD, KiCAD, Linux, Premiere, Photoshop} \\
-    %  \textbf{Languages}{: C/C++, Python, JavaScript, HTML/CSS, SQL} \\
-    %  \textbf{Developer Tools}{: Git, GitHub, CMake, VS Code, Visual Studio} \\
-    %  \textbf{Libraries/Frameworks}{: OpenCV, OpenGL, Matplotlib, Arduino, ESP-IDF}
-
-     \textbf{Mechanical}{: CAD, SolidWorks, AutoCAD, GD\&T, Fusion360, KiCAD, 3D Printing, Soldering, Machine Tools} \\
-     \textbf{Software}{: C/C++, CMake, Python, Linux, Git, Arduino, I2C, SPI, UART, SQL, OpenCV, OpenGL}
-    }}
- \end{itemize}
+% %-----------EDUCATION-----------
+% \section{Education}
+% \resumeSubHeadingListStart
+%   \resumeSubheading
+%     {University of Waterloo}{\textbf{June 2028}}
+%     {Candidate for BASc in Mechatronics Engineering}{Waterloo, ON}
+%     % create points for relevant courses and awards
+%     \resumeItemListStart
+%       \resumeItem{\textbf{Coursework}: Data Structures, Algorithms, Linear Algebra, Circuits, Structure and Properties of Materials, Object Oriented Programming}
+%     \resumeItemListEnd
+% \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------
 \section{Experience}
-  \resumeSubHeadingListStart
-      
+\resumeSubHeadingListStart
+
 % -----------Multiple Positions Heading-----------
-   % \resumeSubSubheading
-   %  {Software Engineer I}{Oct 2014 - Sep 2016}
-   %  \resumeItemListStart
-   %     \resumeItem{Apache Beam}
-   %       {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-   %  \resumeItemListEnd
-   % \resumeSubHeadingListEnd
+% \resumeSubSubheading
+%  {Software Engineer I}{Oct 2014 - Sep 2016}
+%  \resumeItemListStart
+%     \resumeItem{Apache Beam}
+%       {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%  \resumeItemListEnd
+% \resumeSubHeadingListEnd
 %-------------------------------------------
 
-    \resumeSubheading
-      {\underline{\href{https://www.walkerindustries.xyz/}{Hardware Engineer}}}{Apr. 2024 -- Present}
-      {Wire; Walker Industries Research And Experimentation}{Miami, FL}
-      \resumeItemListStart
-        \resumeItem{Designed VR headset lens frames using \textbf{SolidWorks}, ensuring precise fit and optimal visibility.}
-        \resumeItem{Developed a \textbf{C/C++} WebSocket interface on top of open sourced drivers to transmit tracking data, replacing HID transport for headset wireless connectivity.}
-      \resumeItemListEnd
+\resumeSubheading
+{\href{https://www.walkerindustries.xyz/}{\underline{Hardware Engineering Intern}}}{April 2024 -- Present}
+{Wire; Walker Industries Research And Experimentation}{Miami, FL}
+\resumeItemListStart
+\resumeItem{Designed VR headset lens frames using \textbf{SolidWorks}, ensuring precise fit and optimal visibility.}
+\resumeItem{Developed a \textbf{C/C++} WebSocket interface to transmit tracking data to allow wireless headset connectivity.}
+\resumeItem{Contributed to a crowdfunded open-source project, driving innovation and accessibility in the XR/VR/AR space.}
+\resumeItemListEnd
 
-    \resumeSubheading
-      {\underline{\href{https://www.gavintranquilino.com/sheartak.html}{Mechanical Engineering Associate}}}{Jan. 2024 -- Apr. 2024}
-      {Sheartak Tools Ltd.}{Waterloo, ON}
-      \resumeItemListStart
-        \resumeItem{Utilized \textbf{SolidWorks} to create 15 custom woodworking cutterhead assemblies, ensuring precision and manufacturing specifications.}
-        \resumeItem{Applied engineering knowledge to create 24 installation manuals based on parts lists, ensuring accurate assembly processes for the clients.}
-        % \resumeItem{Leveraged Google dork queries assisted by ChatGPT to find parts lists online, accessing previously inaccessible documents.}
-        % \resumeItem{Utilized \textbf{Adobe Premiere} and \textbf{Photoshop} to record, script, and edit tutorials and troubleshooting guides for clients, garnering over 1,000 views on \underline{\href{https://www.youtube.com/playlist?list=PL2zKq55_kXLeLsMzZH8ny8A34vHwAoc7n}{YouTube}} and enhancing client satisfaction.}
-        \resumeItem{Created internal \textbf{Selenium} tooling to scrape competitor websites, providing competitive analysis and market insights.}
-        \resumeItem{Developed a \textbf{Python} script to upload 2000+ products on Shopify and OpenCart, automating the process and saving 5 hours of manual work per week.}
-        % \resumeItem{Implemented Git to log \underline{\href{https://sheartak.ca/}{frontend}} JavaScript, HTML, and CSS changes, simplifying the UI for elderly users and providing documentation for future co-op students.}
-      \resumeItemListEnd
+\resumeSubheading
+{\href{https://www.gavintranquilino.com/sheartak.html}{\underline{Mechanical Engineering Intern}}}{January 2024 -- April 2024}
+{Sheartak Tools Ltd.}{Waterloo, ON}
+\resumeItemListStart
+\resumeItem{Utilized \textbf{SolidWorks} and \textbf{GD\&T} practices to design 15 mechanical assemblies, ensuring manufacturing specifications.}
+\resumeItem{Followed engineering standards to create 24 installation manuals based on parts lists for the clients.}
+% \resumeItem{Leveraged Google dork queries assisted by ChatGPT to find parts lists online, accessing previously inaccessible documents.}
+% \resumeItem{Utilized \textbf{Adobe Premiere} and \textbf{Photoshop} to record, script, and edit tutorials and troubleshooting guides for clients, garnering over 1,000 views on \underline{\href{https://www.youtube.com/playlist?list=PL2zKq55_kXLeLsMzZH8ny8A34vHwAoc7n}{YouTube}} and enhancing client satisfaction.}
+\resumeItem{Created internal \textbf{Selenium} tooling to scrape competitor websites, providing competitive analysis and market insights.}
+\resumeItem{Developed a \textbf{Python} script to upload 2000+ products on Shopify, saving 5 hours of manual work per week.}
+% \resumeItem{Implemented Git to log \underline{\href{https://sheartak.ca/}{frontend}} JavaScript, HTML, and CSS changes, simplifying the UI for elderly users and providing documentation for future co-op students.}
+\resumeItemListEnd
 
-    \resumeSubheading
-      {\underline{\href{https://www.gavintranquilino.com/hockey-robot.html}{Robotics Design Team Leader}}}{Feb. 2023 -- May 2023}
-      {Skills Ontario Competition}{Etobicoke, ON}
-      \resumeItemListStart
-        \resumeItem{Developed embedded \textbf{C/C++} program to drive 3-phase motors and bluetooth controls.}
-        \resumeItem{Designed custom protoboard assembly using \textbf{SMD} and \textbf{TH soldering}, saving 30\% chassis space.}
-        \resumeItem{Routed electronics using \textbf{KiCad}, resulting in efficient and customized layouts.}
-        \resumeItem{Designed aluminum chassis using \textbf{AutoCAD}, increasing durability and space in the robot.}
-        % \resumeItem{Streamlined milling techniques to fabricate competition compliant hardware housing.}
-        % \resumeItem{Employed innovative design techniques, utilizing drill batteries and avoiding pre-built kits for electronics housing to reduce 80\% of project expenses.}
-        % \resumeItem{Directed efficient recovery efforts as a collaborative leader, swiftly restoring the robot's functionality post failure, meeting strict deadlines}
-    \resumeItemListEnd
-    
-    \resumeSubheading
-      {\underline{\href{https://www.gavintranquilino.com/rapid-react.html}{Intake Mechanism Designer}}}{Nov. 2021 -- Jun. 2023}
-      {FIRST Robotics Canada}{Waterloo, ON}
-      \resumeItemListStart
-        \resumeItem{Collaborated to design an intake mechanism using \textbf{SolidWorks} for large tennis balls, contributing to our qualification for the FIRST Robotics Worlds championship.}
-        % \resumeItem{Leveraged CNC machining to craft a wooden prototype, uncovering the opportunity to enhance chain engagement by 10\% through optimized linkage placement.}
-        \resumeItem{Enhanced intake reliability through material testing and \textbf{3D printing} boosting pickup success from 50\% to 80\% and optimizing tight corner performance.}
-        % \resumeItem{Worked with electrical and software teams to solve technical issues, ensuring robot functionality and reliability in high-stress matches.}
-      \resumeItemListEnd
+\resumeSubheading
+{\href{https://www.gavintranquilino.com/hockey-robot.html}{\underline{Robotics Engineering Lead}}}{February 2023 -- May 2023}
+{Skills Ontario}{Etobicoke, ON}
+\resumeItemListStart
+\resumeItem{Developed embedded \textbf{C/C++} Arduino program to drive 3-phase motors and bluetooth controls.}
+\resumeItem{Designed custom protoboard assembly using \textbf{SMD} and \textbf{TH soldering}, saving 30\% chassis space.}
+\resumeItem{Routed electronics using \textbf{KiCad}, resulting in efficient and customized layouts for a custom robot from scratch.}
+\resumeItem{Drafted aluminum chassis using \textbf{AutoCAD}, increasing durability and space in the robot chassis.}
+% \resumeItem{Streamlined milling techniques to fabricate competition compliant hardware housing.}
+% \resumeItem{Employed innovative design techniques, utilizing drill batteries and avoiding pre-built kits for electronics housing to reduce 80\% of project expenses.}
+% \resumeItem{Directed efficient recovery efforts as a collaborative leader, swiftly restoring the robot's functionality post failure, meeting strict deadlines}
+\resumeItemListEnd
 
-    % \resumeSubheading
-    %   {Air and Noise EHS Engineering Co-op}{Jun. 2022 -- Jul. 2022}
-    %   {GHD}{Waterloo, ON}
-    %   \resumeItemListStart
-    %     \resumeItem{Cataloged ventilation system updates in the company database, increasing data accessibility for engineers.}
-    %     \resumeItem{Transcribed raw vibration data from Kitchener ion light rail train tracks into Excel spreadsheets, facilitating data analysis for modeling, resulting in improved insight into daily vibration patterns.}
-    %     % \resumeItem{Analyzed raw invoice data, precisely calculating energy consumption for a leading Yukon energy firm.}
-    %     % \resumeItem{Reviewed ESDM reports to track client's hazardous air contaminants, enhancing data accuracy.}
-    %   \resumeItemListEnd
+\resumeSubheading
+{\href{https://www.gavintranquilino.com/rapid-react.html}{\underline{Mechanical Designer}}}{November 2021 -- June 2023}
+{FIRST Robotics Canada}{Waterloo, ON}
+\resumeItemListStart
+\resumeItem{Collaborated to design an intake mechanism using \textbf{SolidWorks} for large tennis balls, contributing to our qualification for the FIRST Robotics Worlds championship.}
+% \resumeItem{Leveraged CNC machining to craft a wooden prototype, uncovering the opportunity to enhance chain engagement by 10\% through optimized linkage placement.}
+\resumeItem{Enhanced intake reliability through material testing and \textbf{3D printing}, boosting ball pickup success from 50\% to 80\%.}
+\resumeItem{Optimized tight corner performance, improving the robot's maneuverability and efficiency during competitions.}
+% \resumeItem{Worked with electrical and software teams to solve technical issues, ensuring robot functionality and reliability in high-stress matches.}
+\resumeItemListEnd
 
-    % \resumeSubheading
-    %   {Math and English Tutor}{Oct. 2021 -- Jun. 2023}
-    %   {Freelance}{}
-    %   \resumeItemListStart
-    %     \resumeItem{Nurtured digital literacy, conducting online tutoring sessions and maintaining a supportive virtual learning environment}
-    %     \resumeItem{Applied transferable math skills to support clients in the past school year, resulting in a 10\% average grade improvement}
-    %     \resumeItem{Tailored lesson plans and practice exams, optimizing students' test readiness and elevating their academic achievement}
-    %     \resumeItem{Developed communication skills, advertising services online and in person, resulting in increased clientele}
-    %   \resumeItemListEnd
+% \resumeSubheading
+%   {Air and Noise EHS Engineering Co-op}{Jun. 2022 -- Jul. 2022}
+%   {GHD}{Waterloo, ON}
+%   \resumeItemListStart
+%     \resumeItem{Cataloged ventilation system updates in the company database, increasing data accessibility for engineers.}
+%     \resumeItem{Transcribed raw vibration data from Kitchener ion light rail train tracks into Excel spreadsheets, facilitating data analysis for modeling, resulting in improved insight into daily vibration patterns.}
+%     % \resumeItem{Analyzed raw invoice data, precisely calculating energy consumption for a leading Yukon energy firm.}
+%     % \resumeItem{Reviewed ESDM reports to track client's hazardous air contaminants, enhancing data accuracy.}
+%   \resumeItemListEnd
 
-    % \resumeSubheading
-    %   {\href{https://cravinvinyls.etsy.com/}{Small Business Entrepreneur}}{Jun. 2019 -- Ongoing}
-    %   {\href{https://cravinvinyls.etsy.com/}{Cravin' Vinyls}}{}
-    %   \resumeItemListStart
-    %     \resumeItem{Launched a dynamic multi-platform e-commerce retail venture, specializing in sticker decals, and clothing, driving revenue growth through strategic marketing.}
-    %     \resumeItem{Developed customer service skills by providing support and communication to a diverse clientele.}
-    %     \resumeItem{Elevated brand visibility through social media marketing, leveraging platforms such as Instagram (\href{https://www.instagram.com/cravin.vinyls/}{\underline{@cravin.vinyls}}), resulting in a 30\% increase in online sales and a 20\% growth in follower base within 3 months}
-    %     \resumeItem{Optimized financing, budgeting, and pricing strategies to achieve an 80\% sales increase.}
-    %   \resumeItemListEnd
+% \resumeSubheading
+%   {Math and English Tutor}{Oct. 2021 -- Jun. 2023}
+%   {Freelance}{}
+%   \resumeItemListStart
+%     \resumeItem{Nurtured digital literacy, conducting online tutoring sessions and maintaining a supportive virtual learning environment}
+%     \resumeItem{Applied transferable math skills to support clients in the past school year, resulting in a 10\% average grade improvement}
+%     \resumeItem{Tailored lesson plans and practice exams, optimizing students' test readiness and elevating their academic achievement}
+%     \resumeItem{Developed communication skills, advertising services online and in person, resulting in increased clientele}
+%   \resumeItemListEnd
 
-  \resumeSubHeadingListEnd
+% \resumeSubheading
+%   {\href{https://cravinvinyls.etsy.com/}{Small Business Entrepreneur}}{Jun. 2019 -- Ongoing}
+%   {\href{https://cravinvinyls.etsy.com/}{Cravin' Vinyls}}{}
+%   \resumeItemListStart
+%     \resumeItem{Launched a dynamic multi-platform e-commerce retail venture, specializing in sticker decals, and clothing, driving revenue growth through strategic marketing.}
+%     \resumeItem{Developed customer service skills by providing support and communication to a diverse clientele.}
+%     \resumeItem{Elevated brand visibility through social media marketing, leveraging platforms such as Instagram (\href{https://www.instagram.com/cravin.vinyls/}{\underline{@cravin.vinyls}}), resulting in a 30\% increase in online sales and a 20\% growth in follower base within 3 months}
+%     \resumeItem{Optimized financing, budgeting, and pricing strategies to achieve an 80\% sales increase.}
+%   \resumeItemListEnd
+
+\resumeSubHeadingListEnd
 
 
 %-----------PROJECTS-----------
 \section{Projects}
-    \resumeSubHeadingListStart
+\resumeSubHeadingListStart
 
-      % ML version with genetic algs
-      % \resumeProjectHeading
-      %     {\textbf{\underline{\href{https://github.com/gavintranquilino/self-balancing-unicycle}{Self-Balancing Unicycle Game/Physics Simulation}}} $|$ \emph{C++, OpenGL, CMake, Raylib, Control Theory, PID}}{}
-      %     \resumeItemListStart
-      %       \resumeItem{Utilized a genetic algorithm to fine-tune PID constants, optimizing system performance and stability.}
-      %       \resumeItem{Derived equations of motion for the Unicycle system, ensuring accurate modeling of dynamics.}
-      %       \resumeItem{Implemented a cascading PID controller to stabilize the unicycle, effectively maintaining balance and reducing error.}
-      %     \resumeItemListEnd    
+% ML version with genetic algs
+% \resumeProjectHeading
+%     {\textbf{\underline{\href{https://github.com/gavintranquilino/self-balancing-unicycle}{Self-Balancing Unicycle Game/Physics Simulation}}} $|$ \emph{C++, OpenGL, CMake, Raylib, Control Theory, PID}}{}
+%     \resumeItemListStart
+%       \resumeItem{Utilized a genetic algorithm to fine-tune PID constants, optimizing system performance and stability.}
+%       \resumeItem{Derived equations of motion for the Unicycle system, ensuring accurate modeling of dynamics.}
+%       \resumeItem{Implemented a cascading PID controller to stabilize the unicycle, effectively maintaining balance and reducing error.}
+%     \resumeItemListEnd    
 
-      \resumeProjectHeading
-          {\textbf{\underline{\href{https://github.com/gavintranquilino/self-balancing-unicycle}{Self-Balancing Unicycle}}} $|$ \emph{C++, OpenGL, CMake, Raylib, Control Theory, PID, OOP}}{}
-          \resumeItemListStart
-            \resumeItem{Derived equations of motion using Lagrangian and linearization techniques to estimate and optimize trig calculations.}
-            \resumeItem{Utilized \textbf{C++} and \textbf{CMake} to develop a graphical simulator, demonstrating cascading \textbf{PID control} to effectively manage both the angle and position of the unicycle.}
-            \resumeItem{Implemented \textbf{Git} submodules to reference third-party \textbf{OpenGL} wrappers, to visualize the simulation.}
-          \resumeItemListEnd    
+\resumeProjectHeading
+{\textbf{\href{https://github.com/gavintranquilino/self-balancing-unicycle}{\underline{Self-Balancing Unicycle}}} $|$ \emph{C++, OpenGL, CMake, Raylib, Control Theory, PID, OOP}}{}
+\resumeItemListStart
+\resumeItem{Derived equations of motion using linearization techniques to estimate and optimize trigonometric calculations.}
+\resumeItem{Utilized \textbf{C++} and \textbf{CMake} to develop a graphical simulator that demonstrates \textbf{PID control} to keep the unicycle upright.}
+\resumeItem{Implemented \textbf{Git} submodules to reference third-party \textbf{OpenGL} wrappers, to visualize the simulation.}
+\resumeItemListEnd
 
-      % \resumeProjectHeading
-      %     {\textbf{\underline{\href{https://devpost.com/software/lmql}{AI Agents: Large Model Query Language Demo}}} $|$ \emph{LMQL, Python, AI Agents, AI/ML, Tokenization}}{}
-      %     \resumeItemListStart
-      %       \resumeItem{1st place winner at AI Agents Hackathon}
-      %       \resumeItem{Utilized LMQL Playground and OpenAI API to integrate LMQL features into the platform, enhancing user experience and enabling advanced search functionalities, resulting in a 20\% increase in user engagement.}
-      %       \resumeItem{Researched and implemented cutting-edge AI concepts such as AI, transformations, models, and tokenization, effectively improving platform functionality and staying ahead of industry trends.}
-      %     \resumeItemListEnd    
+% \resumeProjectHeading
+%     {\textbf{\underline{\href{https://devpost.com/software/lmql}{AI Agents: Large Model Query Language Demo}}} $|$ \emph{LMQL, Python, AI Agents, AI/ML, Tokenization}}{}
+%     \resumeItemListStart
+%       \resumeItem{1st place winner at AI Agents Hackathon}
+%       \resumeItem{Utilized LMQL Playground and OpenAI API to integrate LMQL features into the platform, enhancing user experience and enabling advanced search functionalities, resulting in a 20\% increase in user engagement.}
+%       \resumeItem{Researched and implemented cutting-edge AI concepts such as AI, transformations, models, and tokenization, effectively improving platform functionality and staying ahead of industry trends.}
+%     \resumeItemListEnd    
 
-      \resumeProjectHeading
-          {\textbf{\underline{\href{https://devpost.com/software/blink-twice-if-you-need-help}{Blink Twice If You Need Help}}} $|$ \emph{Python, OpenCV, Twilio, Git, GitHub, Face Tracking}}{}
-          \resumeItemListStart
-            \resumeItem{Engineered a \textbf{computer vision} wearable for real time eye tracking, triggering immediate calls for assistance.}
-            \resumeItem{Integrated Twilio for swift emergency contact, reducing response time.}
-          \resumeItemListEnd    
+\resumeProjectHeading
+{\textbf{\href{https://devpost.com/software/blink-twice-if-you-need-help}{\underline{Blink Twice If You Need Help}}} $|$ \emph{Python, OpenCV, Twilio, Git, GitHub, Face Tracking}}{}
+\resumeItemListStart
+\resumeItem{Engineered a computer vision wearable using \textbf{OpenCV} for real time eye tracking, triggering immediate calls for assistance.}
+\resumeItem{Integrated Twilio for swift emergency contact, reducing response time.}
+\resumeItemListEnd
 
-      % \resumeProjectHeading
-      %     {\textbf{\underline{\href{https://github.com/ransomw/the-benevolent-dictators}{Benevolens}}} $|$ \emph{Python, Optical Character Recognition, Steganography, Git, GitHub}}{}
-      %     \resumeItemListStart
-      %       \resumeItem{Leveraged steganography and optical character recognition (OCR) to encode and decode hidden messages in images, improving data security and facilitating covert communication.}
-      %       \resumeItem{Employed Git to effectively collaborate with a team of 5 in developing a command-line interface (CLI) within a 2 week project completion timeframe.}
-      %     \resumeItemListEnd    
+% \resumeProjectHeading
+%     {\textbf{\underline{\href{https://github.com/ransomw/the-benevolent-dictators}{Benevolens}}} $|$ \emph{Python, Optical Character Recognition, Steganography, Git, GitHub}}{}
+%     \resumeItemListStart
+%       \resumeItem{Leveraged steganography and optical character recognition (OCR) to encode and decode hidden messages in images, improving data security and facilitating covert communication.}
+%       \resumeItem{Employed Git to effectively collaborate with a team of 5 in developing a command-line interface (CLI) within a 2 week project completion timeframe.}
+%     \resumeItemListEnd    
 
-      % \resumeProjectHeadingWithDetails
-      %     {\textbf{\underline{\href{https://devpost.com/software/psyche-tracker}{PsychTracker}}} $|$
-      %     \emph{Python, Linux, SSH, Arduino, C++, Git, OpenCV, SolidWorks, Tensorflow, MongoDB}}{}{HackTheNorth}{}
+% \resumeProjectHeadingWithDetails
+%     {\textbf{\underline{\href{https://devpost.com/software/psyche-tracker}{PsychTracker}}} $|$
+%     \emph{Python, Linux, SSH, Arduino, C++, Git, OpenCV, SolidWorks, Tensorflow, MongoDB}}{}{HackTheNorth}{}
 
-      %     \resumeItemListStart
-      %       \resumeItem{Harnessed soldering techniques to create robust and durable electrical connections.}
-      %       \resumeItem{Integrated a temperature sensor into the device for skin temperature data collection.}
-      %       \resumeItem{Led a 3-member team to swiftly complete Psych Tracker within a 36-hour timeframe, ensuring successful hardware and machine learning integration.}
-      %     \resumeItemListEnd 
-    
-      \resumeProjectHeading
-          {\textbf{\underline{\href{https://www.gavintranquilino.com/light-switch.html}{IoT Light Switch Bot/Mount}}} $|$ \emph{Python, Flask, 3D Modelling, 3D Printing, Fusion360, Linux, HTTP, TLS}}{}
-          \resumeItemListStart
-            \resumeItem{Designed a \textbf{3D-printed} mount with an integrated web application for remote light switch control.}
-            \resumeItem{Implemented a \textbf{Linux} web server, enabling remote access to room lights globally.}
-            \resumeItem{Innovatively enhanced safety by designing a physical light switch mount, eliminating high-voltage work.}
-          \resumeItemListEnd
+%     \resumeItemListStart
+%       \resumeItem{Harnessed soldering techniques to create robust and durable electrical connections.}
+%       \resumeItem{Integrated a temperature sensor into the device for skin temperature data collection.}
+%       \resumeItem{Led a 3-member team to swiftly complete Psych Tracker within a 36-hour timeframe, ensuring successful hardware and machine learning integration.}
+%     \resumeItemListEnd 
 
-      % \resumeProjectHeading
-      %     {\textbf{\underline{\href{https://www.mathemati.co/}{Hand Tracking Math Learning Tool}}} $|$ \emph{Python, MediaPipe, OpenCV, OOP}}{}
-      %     \resumeItemListStart
-      %       \resumeItem{Initiated hand-tracking solution to create an interactive math learning tool, enhancing student engagement and accesibility.}
-      %       \resumeItem{Achieved Mediapipe connectivity to custom Python game engine, enabling real time hand tracking and gesture recognition.}
-      %       \resumeItem{Led a team of 3 to develop a user-friendly interface, ensuring seamless integration with MediaPipe and OpenCV.}
-      %     \resumeItemListEnd
+\resumeProjectHeading
+{\textbf{\href{https://www.gavintranquilino.com/light-switch.html}{\underline{IoT Light Switch Bot/Mount}}} $|$ \emph{Python, Flask, 3D Modelling, 3D Printing, Fusion360, Linux, HTTP}}{}
+\resumeItemListStart
+\resumeItem{Designed a \textbf{3D-printed} mount with an integrated web application for remote light switch control.}
+\resumeItem{Implemented a \textbf{Linux} web server, enabling remote \textbf{HTTP} access to room lights globally.}
+\resumeItem{Innovatively enhanced safety by designing a physical light switch mount, eliminating high-voltage work.}
+\resumeItemListEnd
 
-      % \resumeProjectHeading
-      %     {\textbf{Lamp Notification Bot} $|$ \emph{Python, Soldering, Wiring, Linux}}{}
-      %     \resumeItemListStart
-      %       \resumeItem{Implemented Python programming skills to enable real-time mobile notifications through a wired desktop lamp modification}
-      %     \resumeItemListEnd
+% \resumeProjectHeading
+%     {\textbf{\underline{\href{https://www.mathemati.co/}{Hand Tracking Math Learning Tool}}} $|$ \emph{Python, MediaPipe, OpenCV, OOP}}{}
+%     \resumeItemListStart
+%       \resumeItem{Initiated hand-tracking solution to create an interactive math learning tool, enhancing student engagement and accesibility.}
+%       \resumeItem{Achieved Mediapipe connectivity to custom Python game engine, enabling real time hand tracking and gesture recognition.}
+%       \resumeItem{Led a team of 3 to develop a user-friendly interface, ensuring seamless integration with MediaPipe and OpenCV.}
+%     \resumeItemListEnd
 
-      % \resumeProjectHeading
-      %     {\textbf{\href{https://www.gavintranquilino.com/covid-19-bypass.html}{\underline{COVID-19 Screening Bypass}}} $|$ \emph{Python, SMTP, Web Scraping}}{}
-      %     \resumeItemListStart
-      %       \resumeItem{Automated daily school COVID-19 screening by implementing web scraping techniques and SMTP protocol requests}
-      %     \resumeItemListEnd
+% \resumeProjectHeading
+%     {\textbf{Lamp Notification Bot} $|$ \emph{Python, Soldering, Wiring, Linux}}{}
+%     \resumeItemListStart
+%       \resumeItem{Implemented Python programming skills to enable real-time mobile notifications through a wired desktop lamp modification}
+%     \resumeItemListEnd
 
-      % \resumeProjectHeading
-      %     {\textbf{Quadratic Equation Visualizer} $|$ \emph{Python, Matplotlib}}{}
-      %     \resumeItemListStart
-      %       \resumeItem{Developed a streamlined quadratic equation calculator with matplotlib for instant computation, enabling users to efficiently solve and visualize quadratic equations}
-      %     \resumeItemListEnd
+% \resumeProjectHeading
+%     {\textbf{\href{https://www.gavintranquilino.com/covid-19-bypass.html}{\underline{COVID-19 Screening Bypass}}} $|$ \emph{Python, SMTP, Web Scraping}}{}
+%     \resumeItemListStart
+%       \resumeItem{Automated daily school COVID-19 screening by implementing web scraping techniques and SMTP protocol requests}
+%     \resumeItemListEnd
 
-    \resumeSubHeadingListEnd
+% \resumeProjectHeading
+%     {\textbf{Quadratic Equation Visualizer} $|$ \emph{Python, Matplotlib}}{}
+%     \resumeItemListStart
+%       \resumeItem{Developed a streamlined quadratic equation calculator with matplotlib for instant computation, enabling users to efficiently solve and visualize quadratic equations}
+%     \resumeItemListEnd
 
-%
+\resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+          %  \textbf{Software}{: SolidWorks, Fusion360, AutoCAD, KiCAD, Linux, Premiere, Photoshop} \\
+          %  \textbf{Languages}{: C/C++, Python, JavaScript, HTML/CSS, SQL} \\
+          %  \textbf{Developer Tools}{: Git, GitHub, CMake, VS Code, Visual Studio} \\
+          %  \textbf{Libraries/Frameworks}{: OpenCV, OpenGL, Matplotlib, Arduino, ESP-IDF}
+
+          %  \textbf{Hardware}{: CAD, SolidWorks, AutoCAD, GD\&T, Fusion360, KiCAD, 3D Printing, Soldering, Machine Tools} \\
+          %  \textbf{Software}{: C/C++, CMake, Python, Linux, Git, Arduino, I2C, SPI, UART, SQL, OpenCV, OpenGL} \\
+
+          \textbf{Electrical}{: KiCAD, I2C, SPI, UART, Arduino, ESP-IDF, Soldering, Oscilloscope} \\
+          \textbf{Software}{: Python, C, C++, CMake, SQL, OpenGL, OpenCV, Linux, Git, Flask, HTML, CSS, JavaScript} \\
+          \textbf{Mechanical}{: SolidWorks, AutoCAD, Fusion360, GD\&T, CAD, 3D Printing, Machine Tools} \\
+          }}
+\end{itemize}
 
 
-%-----------EDUCATION-----------
+% %-----------EDUCATION-----------
 \section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {University of Waterloo}{Waterloo, ON}
-      {Candidate for BASc in Mechatronics Engineering}{Expected Jun. 2028}
-      % create points for relevant courses and awards
-      % \resumeItemListStart
-        % \resumeItem{Relevant Coursework: Linear Algebra, Calculus, C++, Chemistry, SolidWorks}
-        % \resumeItem{Awards: President's Scholarship of Distinction}
-      % \resumeItemListEnd
-  \resumeSubHeadingListEnd
-
-
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {University of Waterloo}{\textbf{June 2028}}
+    {Candidate for BASc in Mechatronics Engineering}{Waterloo, ON}
+    % create points for relevant courses and awards
+    \resumeItemListStart
+      \resumeItem{\textbf{Coursework}: Data Structures, Algorithms, Linear Algebra, Circuits, Structure and Properties of Materials, Object Oriented Programming}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
 
 %-------------------------------------------
 \end{document}
