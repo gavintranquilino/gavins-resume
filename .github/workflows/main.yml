@@ -13,5 +13,5 @@ jobs:
         uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.WORKFLOW_DISPATCH_TOKEN }}
-          repository: gavintranquilino/gavintranquilino.github.io
+          repository: gavintranquilino/gavintranquilino.github.io-hugo
           event-type: pdf_update
