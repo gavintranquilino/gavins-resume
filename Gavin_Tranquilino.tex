@@ -147,7 +147,7 @@
         \textit{\Large Mechatronics Engineering Student}                                   
         & \textbf{\hfill} \href{mailto:gtranqui@uwaterloo.ca}{\underline{gtranqui@uwaterloo.ca}}                     \\
         & \textbf{\hfill} \href{https://github.com/gavintranquilino}{\underline{github.com/gavintranquilino}} \\
-        & \textbf{\hfill} \href{https://www.youtube.com/@gavintranquilino}{\underline{youtube.com/@gavintranquilino}} \\
+        % & \textbf{\hfill} \href{https://www.youtube.com/@gavintranquilino}{\underline{youtube.com/@gavintranquilino}} \\
         & \textbf{\hfill} \href{https://linkedin.com/in/gavintranquilino}{\underline{linkedin.com/in/gavintranquilino}} \end{tabularx} \end{center}
 
 %----------HEADING CENTERED, LINKS CENTERED IN A ROW----------
@@ -187,6 +187,16 @@
 %-------------------------------------------
 
 \resumeSubheading
+{\href{https://www.gavintranquilino.com/ideas-clinic.html}{\underline{Humanoid Robotics Engineering Co-op}}}{May 2025 -- Present}
+{WATonomous}{Waterloo, ON}
+\resumeItemListStart
+\resumeItem{Designing and prototyping \textbf{dexterous humanoid arms} with the goal of autonomous keyboard typing.}
+\resumeItem{Developing software interface to bridge high-level \textbf{ROS2} control and low-level embedded systems over a \textbf{CAN bus}.}
+\resumeItem{Containerizing ROS2 system in \textbf{Docker}, mounting CAN transceivers to enable communication between subsystems.}
+\resumeItem{Creating \textbf{voxel maps} from \textbf{point clouds} acquired via ROS wrapper for \textbf{Intel RealSense} to enhance 3D modeling.}
+\resumeItemListEnd
+
+\resumeSubheading
 {\href{https://www.gavintranquilino.com/ideas-clinic.html}{\underline{Undergraduate Research Assistant}}}{September 2024 -- December 2024}
 {University of Waterloo - Engineering IDEAs Clinic}{Waterloo, ON}
 \resumeItemListStart
@@ -194,7 +204,7 @@
 \resumeItem{Built swarm robots using \textbf{Gazebo} and \textbf{TurtleBot3}, showcasing \textbf{LIDAR} integration and \textbf{odometry} in Python.}
 \resumeItem{Implemented \textbf{adaptive cruise control} on physical robots using \textbf{PID} controllers in \textbf{C++} and \textbf{Python} packages.}
 % \resumeItem{Led a \textbf{ROS2} workshop for 100+ students, introducing fundamental concepts and streamlining \textbf{Docker} installations.}
-\resumeItem{Utilized \textbf{Docker} to enable robot development across all operating systems, streamlining the deployment of \textbf{ROS2} apps.}
+% \resumeItem{Utilized \textbf{Docker} to enable robot development across all operating systems, streamlining the deployment of \textbf{ROS2} apps.}
 \resumeItemListEnd
 
 % \resumeSubheading
@@ -219,18 +229,18 @@
 \resumeItemListEnd
 
 
-\resumeSubheading
-{\href{https://www.gavintranquilino.com/hockey-robot.html}{\underline{Robotics Engineering Team Lead}}}{February 2023 -- May 2023}
-{Skills Ontario}{Etobicoke, ON}
-\resumeItemListStart
-\resumeItem{Developed embedded \textbf{C/C++} Arduino program to drive 3-phase motors and bluetooth controls.}
-\resumeItem{Designed custom protoboard assembly using \textbf{SMD} and \textbf{TH soldering}, saving 30\% chassis space.}
-\resumeItem{Routed electronics using \textbf{KiCAD}, resulting in efficient and customized layouts for a custom robot from scratch.}
-\resumeItem{Drafted aluminum chassis using \textbf{AutoCAD}, increasing durability and space in the robot chassis.}
+% \resumeSubheading
+% {\href{https://www.gavintranquilino.com/hockey-robot.html}{\underline{Robotics Engineering Team Lead}}}{February 2023 -- May 2023}
+% {Skills Ontario}{Etobicoke, ON}
+% \resumeItemListStart
+% \resumeItem{Developed embedded \textbf{C/C++} Arduino program to drive 3-phase motors and bluetooth controls.}
+% \resumeItem{Designed custom protoboard assembly using \textbf{SMD} and \textbf{TH soldering}, saving 30\% chassis space.}
+% \resumeItem{Routed electronics using \textbf{KiCAD}, resulting in efficient and customized layouts for a custom robot from scratch.}
+% \resumeItem{Drafted aluminum chassis using \textbf{AutoCAD}, increasing durability and space in the robot chassis.}
 % \resumeItem{Streamlined milling techniques to fabricate competition compliant hardware housing.}
 % \resumeItem{Employed innovative design techniques, utilizing drill batteries and avoiding pre-built kits for electronics housing to reduce 80\% of project expenses.}
 % \resumeItem{Directed efficient recovery efforts as a collaborative leader, swiftly restoring the robot's functionality post failure, meeting strict deadlines}
-\resumeItemListEnd
+% \resumeItemListEnd
 
 % \resumeSubheading
 % {\href{https://www.gavintranquilino.com/rapid-react.html}{\underline{Mechanical Designer}}}{November 2021 -- June 2023}
@@ -286,13 +296,22 @@
 % \resumeItem{Leveraged photogrammetry to create a 3D model of a stuffed animal, enhancing the virtual pet's realism.}
 % \resumeItem{Experimented with \textbf{ESP-IDF} on an \textbf{ESP32} to develop a handheld console with a virtual pet, utilizing an \textbf{IMU} for interactive gameplay.}
 % \resumeItemListEnd
+\resumeProjectHeading
+{\textbf{\href{https://github.com/gavintranquilino/self-balancing-unicycle}{\underline{Autonomous LiDAR Navigation for Mobile Robot}}} }{}
+\resumeItemListStart
+\resumeItem{Developed \textbf{C++ ROS2} nodes to convert \textbf{LiDAR} data into a \textbf{2D costmap} for obstacle detection and perception.}
+\resumeItem{Generated a \textbf{world model} from costmap and odometry data to represent the current environment.}
+\resumeItem{Implemented \textbf{A* algorithm} to compute obstacle-aware paths through the mapped environment.}
+\resumeItem{Applied \textbf{Pure Pursuit} to follow planned paths for smooth differential drive navigation.}
+\resumeItem{\textbf{Dockerized} the system and integrated with \textbf{Gazebo} and \textbf{Foxglove} for simulation, debugging, and real-time visualization.}
+\resumeItemListEnd
 
 \resumeProjectHeading
 {\textbf{\href{https://www.gavintranquilino.com/ideas-clinic.html}{\underline{Instrumented Knee Crutch}}} \emph{}}{}
 \resumeItemListStart
 \resumeItem{Designed a digital CAD twin of an existing knee crutch in \textbf{SolidWorks}.}
 \resumeItem{Developed a \textbf{data aquisition} system using \textbf{I2C} and Arduino, converting a bathroom scale for real-time load measurements.}
-\resumeItem{Researched and integrated \textbf{strain gauges} and \textbf{load cells}, raising load measurement range from 10kg to 50kg.}
+% \resumeItem{Researched and integrated \textbf{strain gauges} and \textbf{load cells}, raising load measurement range from 10kg to 50kg.}
 \resumeItem{Prototyped \textbf{3D-printed} mounts and knee platforms for strain gauges, ensuring user comfort.}
 % \resumeItem{Created single-board load cell schematics in \textbf{KiCAD}, streamlining sensor integration.}
 \resumeItem{Built \textbf{Python} scripts for force distribution visualization in \textbf{Matplotlib}, with data logging for \textbf{gait analysis}.}
@@ -345,13 +364,13 @@
 %       \resumeItem{Awarded by the Grand River Hospital's Tech Innovation Challenge as having "Most Impact".}
 %     \resumeItemListEnd
 
-\resumeProjectHeading
-{\textbf{\href{https://www.gavintranquilino.com/light-switch.html}{\underline{IoT Light Switch Bot/Mount}}} \emph{}}{}
-\resumeItemListStart
-\resumeItem{Designed a \textbf{3D-printed} mount with an integrated web application for remote light switch control.}
-\resumeItem{Implemented an Ubuntu \textbf{Linux} web server, enabling remote \textbf{HTTP} access to room lights globally.}
-\resumeItem{Innovatively enhanced safety by designing a physical light switch mount, eliminating high-voltage work.}
-\resumeItemListEnd
+% \resumeProjectHeading
+% {\textbf{\href{https://www.gavintranquilino.com/light-switch.html}{\underline{IoT Light Switch Bot/Mount}}} \emph{}}{}
+% \resumeItemListStart
+% \resumeItem{Designed a \textbf{3D-printed} mount with an integrated web application for remote light switch control.}
+% \resumeItem{Implemented an Ubuntu \textbf{Linux} web server, enabling remote \textbf{HTTP} access to room lights globally.}
+% \resumeItem{Innovatively enhanced safety by designing a physical light switch mount, eliminating high-voltage work.}
+% \resumeItemListEnd
 
 % \resumeProjectHeading
 %     {\textbf{\underline{\href{https://www.mathemati.co/}{Hand Tracking Math Learning Tool}}} $|$ \emph{Python, MediaPipe, OpenCV, OOP}}{}
