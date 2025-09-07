@@ -112,6 +112,7 @@
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeSubItemListStart}{\begin{itemize}[leftmargin=0.3in]}
 
 %-------------------------------------------
 % ----- RESUME STARTS HERE -----
@@ -176,40 +177,38 @@
 \section{Experience}
 \resumeSubHeadingListStart
 
-% -----------Multiple Positions Heading-----------
-% \resumeSubSubheading
-%  {Software Engineer I}{Oct 2014 - Sep 2016}
-%  \resumeItemListStart
-%     \resumeItem{Apache Beam}
-%       {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%  \resumeItemListEnd
-% \resumeSubHeadingListEnd
-%-------------------------------------------
 
 \resumeSubheading
-{\href{https://www.watonomous.ca/}{\underline{Humanoid Robotics Engineering Co-op}}}{May 2025 -- Present}
-{WATonomous}{Waterloo, ON}
-\resumeItemListStart
-\resumeItem{Building \textbf{robotic arms} (6DoF) with tendon driven anthropomorphic hands (20DoF each), aiming for VR teleoperation.}
-\resumeItem{Developing software interface to bridge high-level \textbf{ROS2} control and low-level embedded systems over a \textbf{CAN bus}.}
-\resumeItem{Containerizing ROS2 system in \textbf{Docker}, mounting CAN transceivers to enable communication between subsystems.}
-% \resumeItem{Creating \textbf{voxel maps} from \textbf{point clouds} acquired via ROS wrapper for \textbf{Intel RealSense} to enhance 3D modeling.}
-\resumeItem{Developing \textbf{URDF} models to define kinematic chains and hardware specifications for humanoid robot sim and control.}
-\resumeItem{Implementing embedded \textbf{C++} firmware on \textbf{STM32} microcontrollers for sensor data acquisition and feedback control loops.}
-% \resumeItem{Architecting \textbf{ROS2} message definitions for finger, hand, and arm pose to translate neural network outputs into actionable controller commands.}
-\resumeItem{Designing \textbf{PID controllers} and \textbf{Kalman filters} for control and state estimation of robotic arm joints.}
-\resumeItemListEnd
+  {\href{https://gavintranquilino.com/wato-humanoid/}{\underline{Humanoid Robotics Engineering Co-op}}}{May 2025 -- Present}
+  {WATonomous}{Waterloo, ON}
+  \resumeItemListStart
+    \resumeItem{Building \textbf{robotic arms} (6DoF) with tendon driven anthropomorphic hands (20DoF each), aiming for VR teleoperation.}
+    \resumeItem{Developed software interface to bridge high-level \textbf{ROS2} commands to low-level embedded systems over a \textbf{CAN bus}.}
+    \resumeItem{Containerized ROS2 system in \textbf{Docker}, mounting CAN transceivers to enable communication between subsystems.}
+    \resumeItem{Designed \textbf{URDF} models to define the transform \textbf{TF tree} for \textbf{RL simulation} and training in \textbf{NVIDIA Isaac Sim}.}
+    \resumeItem{Built visualization infrastructure connecting \textbf{Gazebo} simulations to \textbf{Foxglove} for real-time debugging and data analysis.}
+    \resumeItem{Assembled \textbf{PCBs} with 0.5mm pitch \textbf{SMD components}, soldered by hand, reducing assembly costs by 30\%}
+  \resumeItemListEnd
 
 \resumeSubheading
-{\href{https://www.gavintranquilino.com/ideas-clinic.html}{\underline{Undergraduate Research Assistant}}}{September 2024 -- December 2024}
-{University of Waterloo - Engineering IDEAs Clinic}{Waterloo, ON}
-\resumeItemListStart
-\resumeItem{Instrumented a wearable knee crutch, allowing force readings for gait analysis and material selection via \textbf{FEA}.}
-\resumeItem{Built swarm robots in \textbf{Gazebo} using \textbf{ROS2} and \textbf{TurtleBot4}, showcasing \textbf{LiDAR} integration and \textbf{odometry} in Python.}
-\resumeItem{Implemented \textbf{adaptive cruise control} on physical robots using \textbf{PID} controllers in \textbf{C++} and \textbf{Python} packages.}
-% \resumeItem{Led a \textbf{ROS2} workshop for 100+ students, introducing fundamental concepts and streamlining \textbf{Docker} installations.}
-% \resumeItem{Utilized \textbf{Docker} to enable robot development across all operating systems, streamlining the deployment of \textbf{ROS2} apps.}
-\resumeItemListEnd
+  {\href{https://www.gavintranquilino.com/ideas-clinic.html}{\underline{Robotics Undergraduate Research Assistant}}}{September 2024 -- December 2024}
+  {University of Waterloo Engineering IDEAs Clinic}{Waterloo, ON}
+  \resumeItemListStart
+    \resumeItem{Implemented \textbf{adaptive cruise control} on physical robots using \textbf{PID} controllers in \textbf{C++} and \textbf{Python} packages.}
+    \resumeItem{Led a \textbf{ROS2} workshop for 100+ students, introducing fundamental concepts and streamlining \textbf{Docker} installations.}
+    \resumeItem{Utilized \textbf{Docker} to enable robot development across all operating systems, streamlining the deployment of \textbf{ROS2} apps.}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {\href{https://www.gavintranquilino.com/ideas-clinic.html}{\underline{Undergraduate Research Assistant}}}{September 2024 -- December 2024}
+  {University of Waterloo Engineering IDEAs Clinic}{Waterloo, ON}
+  \resumeItemListStart
+    \resumeItem{Instrumented a wearable knee crutch, allowing force readings for gait analysis and material selection via \textbf{FEA}.}
+    \resumeItem{Designed a digital CAD twin of an existing knee crutch in \textbf{SolidWorks}.}
+    \resumeItem{Developed a \textbf{data acquisition} system using \textbf{I2C} and C++, converting a bathroom scale for real-time load measurements.}
+    \resumeItem{Prototyped \textbf{3D-printed} mounts and knee platforms for strain gauges, ensuring user comfort.}
+    \resumeItem{Built \textbf{Python} scripts for force distribution visualization in \textbf{Matplotlib}, with data logging for \textbf{gait analysis}.}
+  \resumeItemListEnd
 
 % \resumeSubheading
 % {\href{https://www.walkerindustries.xyz/}{\underline{Hardware Engineering Intern}}}{April 2024 -- August 2024}
@@ -220,17 +219,18 @@
 % \resumeItem{Contributed to a crowdfunded open-source project, driving innovation and accessibility in the XR/VR/AR space.}
 % \resumeItemListEnd
 
-\resumeSubheading
-{\href{https://www.gavintranquilino.com/sheartak.html}{\underline{Mechanical Engineering Associate}}}{January 2024 -- April 2024}
-{Sheartak Tools Ltd.}{Waterloo, ON}
-\resumeItemListStart
-\resumeItem{Designed 15 third party woodworking machinery upgrades with \textbf{DFMA} in \textbf{SolidWorks} to meet OEM specifications.}
-\resumeItem{Applied \textbf{GD\&T} principles to guarantee manufacturing accuracy for custom machine parts.}
-% \resumeItem{Collaborated with clients to create tailored part designs, improving machine performance and meeting specific customer requirements.}
-\resumeItem{Created 25 detailed installation manuals, including parts lists and assembly instructions, ensuring ease of use for customers.}
-% \resumeItem{Streamlined version control for website updates using \textbf{Git}, reducing deployment time by 20\%.}
-\resumeItem{Built a \textbf{Python/Selenium} web scraper to automate competitive analysis and product uploads, processing 2000+ products.}
-\resumeItemListEnd
+
+% \resumeSubheading
+% {\href{https://www.gavintranquilino.com/sheartak.html}{\underline{Mechanical Engineering Associate}}}{January 2024 -- April 2024}
+% {Sheartak Tools Ltd.}{Waterloo, ON}
+% \resumeItemListStart
+% \resumeItem{Built a \textbf{Python/Selenium} web scraper to automate competitive analysis and product uploads, processing 2000+ products.}
+% \resumeItem{Designed 15 third party woodworking machinery upgrades with \textbf{DFMA} in \textbf{SolidWorks} to meet OEM specifications.}
+% \resumeItem{Applied \textbf{GD\&T} principles to guarantee manufacturing accuracy for custom machine parts.}
+% % \resumeItem{Collaborated with clients to create tailored part designs, improving machine performance and meeting specific customer requirements.}
+% \resumeItem{Created 25 detailed installation manuals, including parts lists and assembly instructions, ensuring ease of use for customers.}
+% % \resumeItem{Streamlined version control for website updates using \textbf{Git}, reducing deployment time by 20\%.}
+% \resumeItemListEnd
 
 
 % \resumeSubheading
@@ -294,39 +294,33 @@
 \section{Projects}
 \resumeSubHeadingListStart
 
-% \resumeProjectHeading
-% {\textbf{\href{https://www.gavintranquilino.com/circle-display}{\underline{Handheld Virtual Pet}}} $|$ \emph{C++, IMU, I2C, ESP-IDF, ESP32}}{}
-% \resumeItemListStart
-% \resumeItem{Leveraged photogrammetry to create a 3D model of a stuffed animal, enhancing the virtual pet's realism.}
-% \resumeItem{Experimented with \textbf{ESP-IDF} on an \textbf{ESP32} to develop a handheld console with a virtual pet, utilizing an \textbf{IMU} for interactive gameplay.}
-% \resumeItemListEnd
-\resumeProjectHeading
-{\textbf{\href{https://drive.google.com/file/d/1e_CnKRFxS8eK92Chg4Fbm7ijomO4KjIP/view?usp=drivesdk}{\underline{Autonomous LiDAR Navigation for Mobile Robot}}} }{}
-\resumeItemListStart
-\resumeItem{Developed \textbf{C++ ROS2} nodes to convert \textbf{LiDAR} data into a \textbf{2D costmap} for obstacle detection and perception.}
-\resumeItem{Generated a \textbf{world model} from costmap and odometry data to represent the current environment.}
-\resumeItem{Implemented \textbf{A* algorithm} to compute obstacle-aware paths through the mapped environment.}
-\resumeItem{Applied \textbf{Pure Pursuit} to follow planned paths for smooth differential drive navigation.}
-\resumeItem{\textbf{Dockerized} the system and integrated with \textbf{Gazebo} and \textbf{Foxglove} for simulation, debugging, and real-time visualization.}
-\resumeItemListEnd
+  \resumeProjectHeading
+    {\textbf{\href{https://gavintranquilino.com/wato-asd-training}{\underline{Autonomous LiDAR Navigation for Mobile Robot}}} }{}
+    \resumeItemListStart
+      \resumeItem{Developed \textbf{C++ ROS2} nodes to convert \textbf{LiDAR} data into a \textbf{2D costmap} for obstacle detection and perception.}
+      \resumeItem{Generated a \textbf{world model} from costmap and odometry data to represent the current environment.}
+      \resumeItem{Implemented \textbf{A* algorithm} to compute obstacle-aware paths through the mapped environment.}
+      \resumeItem{Applied \textbf{Pure Pursuit} to follow planned paths for smooth differential drive navigation.}
+      % \resumeItem{\textbf{Dockerized} the system and integrated with \textbf{Gazebo} and \textbf{Foxglove} for simulation, debugging, and real-time visualization.}
+    \resumeItemListEnd
 
-\resumeProjectHeading
-{\textbf{\href{https://www.gavintranquilino.com/ideas-clinic.html}{\underline{Instrumented Knee Crutch}}} \emph{}}{}
-\resumeItemListStart
-\resumeItem{Designed a digital CAD twin of an existing knee crutch in \textbf{SolidWorks}.}
-\resumeItem{Developed a \textbf{data aquisition} system using \textbf{I2C} and Arduino, converting a bathroom scale for real-time load measurements.}
-% \resumeItem{Researched and integrated \textbf{strain gauges} and \textbf{load cells}, raising load measurement range from 10kg to 50kg.}
-\resumeItem{Prototyped \textbf{3D-printed} mounts and knee platforms for strain gauges, ensuring user comfort.}
-% \resumeItem{Created single-board load cell schematics in \textbf{KiCAD}, streamlining sensor integration.}
-\resumeItem{Built \textbf{Python} scripts for force distribution visualization in \textbf{Matplotlib}, with data logging for \textbf{gait analysis}.}
-\resumeItemListEnd
+  \resumeProjectHeading
+    {\textbf{\href{https://www.youtube.com/watch?v=ua6rOGYjlQI}{\underline{Warehouse Autonomous Guided Vehicles (AGV)}}} }{}
+    \resumeItemListStart
+      \resumeItem{\textbf{Won TMMC Software Challenge} by developing autonomous warehouse robots using \textbf{TurtleBot 4} and \textbf{ROS2}.}
+      \resumeItem{Generated a real-time costmap converting 2D \textbf{LiDAR} scans to \textbf{occupancy grids} with obstacle inflation for perception.}
+      \resumeItem{Implemented \textbf{CV} stop sign detection using \textbf{YOLOv8} with bounding box distance estimation to stop at intersections.}
+      \resumeItem{Designed \textbf{cascading PID controller} for wall-following and heading control with \textbf{IMU} feedback for warehouse traversal.}
+      \resumeItem{Solved collision risks by implementing \textbf{LiDAR safety zones} with emergency stopping and backward movement protocols.}
+    \resumeItemListEnd
 
-\resumeProjectHeading
-{\textbf{\href{https://github.com/gavintranquilino/self-balancing-unicycle}{\underline{Self-Balancing Unicycle}}} }{}
-\resumeItemListStart
-\resumeItem{Built a simulator from scratch using \textbf{C++} and \textbf{CMake}, integrating \textbf{OpenGL} to create a custom physics environment.}
-\resumeItem{Implemented \textbf{cascading PID controllers} to control: balancing and achieving precise position tracking.}
-\resumeItemListEnd
+  \resumeProjectHeading
+    {\textbf{\href{https://gavintranquilino.com/self-balancing-unicycle}{\underline{Self-Balancing Unicycle}}} }{}
+    \resumeItemListStart
+      \resumeItem{Built a simulator from scratch using \textbf{C++} and \textbf{CMake}, integrating \textbf{OpenGL} to create a custom physics environment.}
+      \resumeItem{Developed a \textbf{CartPole}-inspired control system focused on wheel \textbf{torque control}.}
+      \resumeItem{Implemented \textbf{cascading PID controllers} to control: balancing and achieving precise position tracking.}
+    \resumeItemListEnd
 
 % \resumeProjectHeading
 %     {\textbf{\underline{\href{https://devpost.com/software/lmql}{AI Agents: Large Model Query Language Demo}}} $|$ \emph{LMQL, Python, AI Agents, AI/ML, Tokenization}}{}
@@ -408,10 +402,10 @@
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
+          \textbf{Software/Languages}{: Python, C, C++, CMake, SSH, Bash,  Gazebo, Foxglove, Linux, Ubuntu, JS, HTML, CSS, SQL, LaTeX} \\
+          \textbf{Libraries/Frameworks}{: ROS2, Docker, OpenCV, YOLOv8, Git, MediaPipe, Flask, Selenium, NumPy, OpenGL} \\
           \textbf{Mechanical}{: SolidWorks, Fusion360, AutoCAD, GD\&T, CAD, FEA, DFMA, 3D Printing, Machine Tools, Onshape} \\
           \textbf{Electrical}{: I2C, SPI, UART, CAN Bus, Arduino, ESP-IDF, Soldering, Oscilloscope, LiDAR, PLC, LAD, VHDL, FPGA} \\
-          \textbf{Software}{: Python, C, C++, CMake, SSH, Bash, TypeScript, JS, HTML, CSS, SQL, LaTeX, Gazebo, Foxglove} \\
-          \textbf{Libraries/Frameworks}{: ROS2, Docker, OpenCV, Linux, Ubuntu, Git, MediaPipe, Flask, Selenium, NumPy, OpenGL} \\
           }}
 \end{itemize}
 
