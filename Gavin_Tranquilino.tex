@@ -17,12 +17,17 @@
   \usepackage[scaled=0.95]{helvet}
 \else
   \usepackage{fontspec}
-  \IfFontExistsTF{Aptos}{%
-    \setmainfont{Aptos}
-    \setsansfont{Aptos}
+  \IfFontExistsTF{Calibri}{%
+    \setmainfont{Calibri}
+    \setsansfont{Calibri}
   }{%
-    \setmainfont{TeX Gyre Heros}
-    \setsansfont{TeX Gyre Heros}
+    \IfFontExistsTF{Aptos}{%
+      \setmainfont{Aptos}
+      \setsansfont{Aptos}
+    }{%
+      \setmainfont{TeX Gyre Heros}
+      \setsansfont{TeX Gyre Heros}
+    }
   }
 \fi
 
