@@ -12,24 +12,13 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{iftex}
+\newcommand{\resumefontname}{Lato}
 \ifPDFTeX
-  \usepackage[T1]{fontenc}
-  \usepackage[scaled=0.95]{helvet}
-\else
-  \usepackage{fontspec}
-  \IfFontExistsTF{Times New Roman}{%
-    \setmainfont{Times New Roman}
-    \setsansfont{Times New Roman}
-  }{%
-    \IfFontExistsTF{Aptos}{%
-      \setmainfont{Aptos}
-      \setsansfont{Aptos}
-    }{%
-      \setmainfont{TeX Gyre Heros}
-      \setsansfont{TeX Gyre Heros}
-    }
-  }
+  \PackageError{resume}{System font selection requires XeLaTeX or LuaLaTeX}{Compile with xelatex or lualatex so \string\resumefontname is applied.}
 \fi
+\usepackage{fontspec}
+\setmainfont{\resumefontname}
+\setsansfont{\resumefontname}
 
 % color
 \usepackage{xcolor}
