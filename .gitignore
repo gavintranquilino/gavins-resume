@@ -9,3 +9,5 @@
 *.synctex(busy)
 *.synctex.gz(busy)
 *.pdfsync
+*.latexmkrc
+*.xdv

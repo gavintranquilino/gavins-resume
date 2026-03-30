@@ -11,6 +11,20 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[scaled=0.95]{helvet}
+\else
+  \usepackage{fontspec}
+  \IfFontExistsTF{Aptos}{%
+    \setmainfont{Aptos}
+    \setsansfont{Aptos}
+  }{%
+    \setmainfont{TeX Gyre Heros}
+    \setsansfont{TeX Gyre Heros}
+  }
+\fi
 
 % color
 \usepackage{xcolor}
@@ -22,7 +36,9 @@
   urlcolor=lightblue
   }
 
-\input{glyphtounicode}
+\ifPDFTeX
+  \input{glyphtounicode}
+\fi
 
 \usepackage{setspace}  % For double spacing
 
@@ -38,6 +54,9 @@
 % serif
 % \usepackage{CormorantGaramond}
 % \usepackage{charter}
+
+% Use a clean proportional sans-serif font globally.
+\renewcommand{\familydefault}{\sfdefault}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -63,8 +82,10 @@
   \vspace{-7pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
+% Ensure that generated PDF is machine readable/ATS parsable.
+\ifPDFTeX
+  \pdfgentounicode=1
+\fi
 
 %-------------------------
 % Custom commands
