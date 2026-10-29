@@ -68,4 +68,4 @@ This document condenses the major projects, accomplishments, and tools you've us
 
 ---
 
-If you want, I can now turn each project bullet into 2–3 resume-ready lines with metrics/impact and action verbs. See the file: [PROJECTS.md](PROJECTS.md)
+Project details are collected here for reference when tailoring resume bullets.

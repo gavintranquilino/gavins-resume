@@ -1,0 +1,28 @@
+{
+  "latex-workshop.latex.outDir": "%DIR%/out",
+  "latex-workshop.latex.auxDir": "%DIR%/out",
+  "latex-workshop.latex.recipe.default": "latexmk (XeLaTeX)",
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk (XeLaTeX)",
+      "command": "latexmk",
+      "args": [
+        "-xelatex",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-outdir=%OUTDIR%",
+        "-auxdir=%OUTDIR%",
+        "%DOC%"
+      ]
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk (XeLaTeX)",
+      "tools": [
+        "latexmk (XeLaTeX)"
+      ]
+    }
+  ]
+}
