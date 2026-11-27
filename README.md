@@ -1,67 +1,54 @@
 # Resume
 
-This project builds locally with XeLaTeX. Docker and the VS Code Dev
-Containers extension are not required.
+## Dependencies
 
-## Install dependencies
-
-The resume uses the system Lato font through `fontspec`, so install Lato in
-addition to the LaTeX packages.
-
-### Fedora
+Install XeLaTeX, latexmk, Make, and the Lato font.
 
 ```sh
-sudo dnf install latexmk texlive-xetex texlive-collection-latexextra \
+# Fedora
+sudo dnf install make latexmk texlive-xetex texlive-collection-latexextra \
   texlive-collection-fontsrecommended texlive-collection-plaingeneric lato-fonts
-```
 
-### Debian or Ubuntu
-
-```sh
+# Debian / Ubuntu
 sudo apt update
-sudo apt install latexmk texlive-xetex texlive-latex-extra \
+sudo apt install make latexmk texlive-xetex texlive-latex-extra \
   texlive-fonts-recommended texlive-plain-generic fonts-lato
+
+# macOS (Make also requires Xcode Command Line Tools)
+xcode-select --install
+brew install --cask mactex font-lato
 ```
 
-### macOS
+## Build locally
 
-Install MacTeX and the Lato font:
+Run from the repository root:
 
 ```sh
-brew install --cask mactex
-brew install --cask font-lato
+make pdf                      # general resume
+make pdf ROLE=software         # one version
+make all                      # every version
+make clean                    # remove generated build files
 ```
 
-After installing the prerequisites, confirm they are available:
+Roles: `general`, `devops`, `software`, `biomedical`, `mechanical`, `electrical`, `robotics`.
 
-```sh
-xelatex --version
-latexmk --version
-fc-match Lato
-```
+PDFs: `out/Gavin_Tranquilino.pdf` for general; `out/<role>/Gavin_Tranquilino.pdf` for others.
 
-## Build
+In VS Code with LaTeX Workshop, open `Gavin_Tranquilino.tex`, select **Build with recipe**, and choose **Resume: <role>**.
 
-From the repository root, run:
+## Editing workflow
 
-```sh
-make pdf
-```
+- Edit bullet wording in `resume/content/experience/` or `resume/content/projects/`.
+- Select and reorder bullets in `resume/variants/<role>.tex`:
+  ```tex
+  \RenderExperience{qidni}{firmware,docker,touchgfx}
+  ```
+- Add new content files to `resume/library.tex` before selecting them.
+- Shared files: `resume/header.tex`, `resume/education.tex`, and `resume/content/skills.tex`. Formatting: `resume/layout.tex`.
+- Rebuild the version and open its PDF to review.
 
-The PDF is written to `out/Gavin_Tranquilino.pdf`. To build without `make`,
-run:
+## CI
 
-```sh
-latexmk -xelatex -interaction=nonstopmode -file-line-error \
-  -outdir=out -auxdir=out Gavin_Tranquilino.tex
-```
-
-To remove generated LaTeX files:
-
-```sh
-make clean
-```
-
-LaTeX Workshop is configured to use the same `latexmk (XeLaTeX)` recipe. In
-VS Code, install the **LaTeX Workshop** extension and use **LaTeX Workshop:
-Build LaTeX project** or the extension's build button.
+On pushes to `main` or a manual run, GitHub Actions sends a `pdf_update` event to
+`gavintranquilino/gavintranquilino.github.io-hugo` using the `WORKFLOW_DISPATCH_TOKEN`
+secret. This workflow only sends the event; it does not compile or test the resumes.

@@ -1,0 +1,37 @@
+% Store content without rendering it. Duplicate IDs and missing selections fail.
+\newcommand{\DeclareResumeEntry}[2]{%
+  \ifcsname resumeentry@#1\endcsname
+    \PackageError{resume}{Duplicate entry '#1'}{Use a unique entry ID.}%
+  \else
+    \expandafter\gdef\csname resumeentry@#1\endcsname{#2}%
+  \fi}
+\newcommand{\DeclareResumeBullet}[2]{%
+  \ifcsname resumebullet@#1\endcsname
+    \PackageError{resume}{Duplicate bullet '#1'}{Use a unique bullet ID.}%
+  \else
+    \expandafter\gdef\csname resumebullet@#1\endcsname{#2}%
+  \fi}
+\makeatletter
+\newcommand{\RenderExperience}[2]{%
+  \ifcsname resumeentry@#1\endcsname
+    \csname resumeentry@#1\endcsname
+    \resumeItemListStart
+    \@for\resumeBulletId:=#2\do{%
+      \ifcsname resumebullet@#1/\resumeBulletId\endcsname
+        \resumeItem{\csname resumebullet@#1/\resumeBulletId\endcsname}%
+      \else
+        \PackageError{resume}{Unknown bullet '#1/\resumeBulletId'}{Check the selection against resume/content.}%
+      \fi}
+    \resumeItemListEnd
+  \else
+    \PackageError{resume}{Unknown entry '#1'}{Check resume/library.tex.}%
+  \fi}
+\newcommand{\RenderSkillGroups}[1]{%
+  \edef\resumeGroups{#1}%
+  \@for\resumeGroup:=\resumeGroups\do{%
+    \ifcsname resumeskills@\resumeGroup\endcsname
+      \csname resumeskills@\resumeGroup\endcsname\\
+    \else
+      \PackageError{resume}{Unknown skill group '\resumeGroup'}{Check resume/content/skills.tex.}%
+    \fi}}
+\makeatother
