@@ -15,6 +15,76 @@
         "-auxdir=%OUTDIR%",
         "%DOC%"
       ]
+    },
+    {
+      "name": "Resume: general",
+      "command": "make",
+      "args": [
+        "-C",
+        "%DIR%",
+        "pdf",
+        "ROLE=general"
+      ]
+    },
+    {
+      "name": "Resume: devops",
+      "command": "make",
+      "args": [
+        "-C",
+        "%DIR%",
+        "pdf",
+        "ROLE=devops"
+      ]
+    },
+    {
+      "name": "Resume: software",
+      "command": "make",
+      "args": [
+        "-C",
+        "%DIR%",
+        "pdf",
+        "ROLE=software"
+      ]
+    },
+    {
+      "name": "Resume: biomedical",
+      "command": "make",
+      "args": [
+        "-C",
+        "%DIR%",
+        "pdf",
+        "ROLE=biomedical"
+      ]
+    },
+    {
+      "name": "Resume: mechanical",
+      "command": "make",
+      "args": [
+        "-C",
+        "%DIR%",
+        "pdf",
+        "ROLE=mechanical"
+      ]
+    },
+    {
+      "name": "Resume: electrical",
+      "command": "make",
+      "args": [
+        "-C",
+        "%DIR%",
+        "pdf",
+        "ROLE=electrical"
+      ]
+    },
+    {
+      "name": "Resume: robotics",
+      "command": "make",
+      "args": [
+        "-C",
+        "%DIR%",
+        "pdf",
+        "ROLE=robotics"
+      ]
     }
   ],
   "latex-workshop.latex.recipes": [
@@ -22,6 +92,48 @@
       "name": "latexmk (XeLaTeX)",
       "tools": [
         "latexmk (XeLaTeX)"
+      ]
+    },
+    {
+      "name": "Resume: general",
+      "tools": [
+        "Resume: general"
+      ]
+    },
+    {
+      "name": "Resume: devops",
+      "tools": [
+        "Resume: devops"
+      ]
+    },
+    {
+      "name": "Resume: software",
+      "tools": [
+        "Resume: software"
+      ]
+    },
+    {
+      "name": "Resume: biomedical",
+      "tools": [
+        "Resume: biomedical"
+      ]
+    },
+    {
+      "name": "Resume: mechanical",
+      "tools": [
+        "Resume: mechanical"
+      ]
+    },
+    {
+      "name": "Resume: electrical",
+      "tools": [
+        "Resume: electrical"
+      ]
+    },
+    {
+      "name": "Resume: robotics",
+      "tools": [
+        "Resume: robotics"
       ]
     }
   ]
